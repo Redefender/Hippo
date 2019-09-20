@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddPersonComponent } from './components/add-person/add-person.component';
 import { PersonComponent } from './components/person/person.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -13,12 +14,14 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     AppComponent,
     AddPersonComponent,
     PersonComponent,
-    SidebarComponent
+    SidebarComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
