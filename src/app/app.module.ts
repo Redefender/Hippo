@@ -7,6 +7,7 @@ import { AddPersonComponent } from './components/add-person/add-person.component
 import { PersonComponent } from './components/person/person.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { PersonFigureComponent } from './components/person-figure/person-figure.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
     AddPersonComponent,
     PersonComponent,
     SidebarComponent,
+    PersonFigureComponent,
 
   ],
   imports: [
