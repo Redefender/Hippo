@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
-
+import { PersonService } from '../../services/person.service';
 @Component({
   selector: 'app-add-person',
   templateUrl: './add-person.component.html',
@@ -8,7 +8,8 @@ import { FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
 })
 export class AddPersonComponent implements OnInit {
   newPersonForm : FormGroup;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,
+    private personService: PersonService) { }
 
   ngOnInit() {
     this.newPersonForm = this.fb.group({
@@ -21,6 +22,8 @@ export class AddPersonComponent implements OnInit {
 
   onSubmit(): void {
     console.log(this.newPersonForm.value);
+    this.personService.sendDataToOtherComponent(this.newPersonForm.value);
+     
   }
 
 }
