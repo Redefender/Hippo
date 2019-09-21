@@ -1,7 +1,8 @@
 <!-- Side navigation -->
 <div class="sidenav">
-    <div *ngFor="let person of people" class="person-figures">
-      <app-person-figure [name]="person.name"></app-person-figure> 
+    <div *ngFor="let person of people; let i = index" class="person-figures">                             
+      <app-person-figure [routerLink]="['/person', i]" 
+          [name]="person.name"></app-person-figure> 
     </div>
-  </div>
+</div>
   
