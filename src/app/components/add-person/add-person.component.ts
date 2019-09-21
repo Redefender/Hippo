@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators} from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-add-person',
@@ -7,18 +7,20 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./add-person.component.css']
 })
 export class AddPersonComponent implements OnInit {
-  form = new FormGroup({
-    name: new FormControl('', Validators.required),
-    birthday: new FormControl('1/1/2001')
-  });
-  constructor() { }
+  newPersonForm : FormGroup;
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-
+    this.newPersonForm = this.fb.group({
+      name: ['', Validators.required],
+      birthday: '',
+      fastFacts: ''
+  
+    });
   }
 
   onSubmit(): void {
-    console.log(this.form.value);
+    console.log(this.newPersonForm.value);
   }
 
 }
