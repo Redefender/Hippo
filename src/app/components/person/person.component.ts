@@ -36,8 +36,10 @@ export class PersonComponent implements OnInit {
   }
 
   initializeState(id){
-    this.newPersonForm.controls['name'].setValue('ohayou');
-    this.newPersonForm.controls['name'].setValue(this.people[id].name);
+    // this.newPersonForm.controls['name'].setValue('ohayou');
+    // this.newPersonForm.controls['name'].setValue(this.people[id].name);
+    // this.newPersonForm.controls = this.people.id.map((attr) => [attr]);
+    this.newPersonForm = this.fb.group(this.people[id]);
   }
 
 }
