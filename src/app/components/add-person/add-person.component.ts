@@ -22,8 +22,8 @@ export class AddPersonComponent implements OnInit {
 
   onSubmit(): void {
     console.log(this.newPersonForm.value);
+    
     this.personService.sendDataToOtherComponent(this.newPersonForm.value);
-     
   }
 
 }
