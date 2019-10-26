@@ -8,6 +8,7 @@ import { PersonComponent } from './components/person/person.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PersonFigureComponent } from './components/person-figure/person-figure.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,12 +19,14 @@ import { PersonFigureComponent } from './components/person-figure/person-figure.
     SidebarComponent,
     PersonFigureComponent,
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

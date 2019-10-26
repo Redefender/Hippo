@@ -6,6 +6,7 @@ import { PersonComponent } from './components/person/person.component';
 
 const routes: Routes = [
   { path: '', component: AddPersonComponent },
+  { path: 'new', component: AddPersonComponent },
   { path: 'person/:id', component: PersonComponent}
 ];
 
